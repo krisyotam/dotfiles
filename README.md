@@ -19,7 +19,8 @@ This repository serves as a central place to store and manage my Gentoo Linux co
 
 ### Structure
 
-```kristoo/
+```
+dotfiles/
 ├── README.md
 ├── scripts/
 │   ├── install.sh
@@ -28,9 +29,10 @@ This repository serves as a central place to store and manage my Gentoo Linux co
 ├── dotfiles/
 │   ├── .bashrc
 │   ├── .vimrc
-│   ├── .zshrc
+│   ├── .emacs
 │   ├── .tmux.conf
-│   └── .gitconfig
+│   ├── .gitconfig
+│   └── .Xresources
 ├── config/
 │   ├── X11/
 │   │   └── xorg.conf.d/
@@ -40,8 +42,12 @@ This repository serves as a central place to store and manage my Gentoo Linux co
 │   │   ├── config.h
 │   │   ├── dwm.desktop
 │   │   └── autostart.sh
-│   └── nvim/
-│       └── init.vim
+│   ├── kitty/
+│   │   └── kitty.conf
+│   ├── nvim/
+│   │   └── init.vim
+│   └── rofi/
+│       └── config.rasi
 └── tools/
     ├── custom-commands/
     │   ├── cpuspeed
@@ -52,7 +58,8 @@ This repository serves as a central place to store and manage my Gentoo Linux co
         │   └── themes/
         └── solarized/
             ├── colors.vim
-            └── themes/ 
+            └── themes/
+
 ```
 
 ### Installation

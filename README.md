@@ -20,7 +20,7 @@ This repository serves as a central place to store and manage my Gentoo Linux co
 ### Structure
 
 ```
-dotfiles/
+kristoo/
 ├── README.md
 ├── scripts/
 │   ├── install.sh

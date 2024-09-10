@@ -67,8 +67,8 @@ kristoo/
 To get started with these configurations, clone the repository and run the installation script:
 
 ```bash
-git clone https://github.com/yourusername/gentoo-nest.git
-cd gentoo-nest/scripts
+git clone https://github.com/yourusername/kristoo.git
+cd kristoo/scripts
 ./install.sh
 
 

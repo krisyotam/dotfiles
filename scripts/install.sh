@@ -16,11 +16,18 @@ else
     git clone https://github.com/username/dotfiles.git "$DOTFILES_DIR"
 fi
 
-# Create symlinks
-ln -sf "$DOTFILES_DIR/.bashrc" ~/.bashrc
-ln -sf "$DOTFILES_DIR/.vimrc" ~/.vimrc
+# Create symlinks for all dotfiles in the dotfiles directory
+for dotfile in "$DOTFILES_DIR"/.*; do
+    if [ -f "$dotfile" ] && [ "$dotfile" != "$DOTFILES_DIR/." ] && [ "$dotfile" != "$DOTFILES_DIR/.." ]; then
+        # Extract the filename
+        filename=$(basename "$dotfile")
+        # Create symlink in home directory
+        ln -sf "$dotfile" ~/"$filename"
+        echo "Symlink created for $filename"
+    fi
+done
 
-echo "Dotfiles symlinked successfully!"
+echo "All dotfiles symlinked successfully!"
 
 # Install Networking Software
 sudo emerge --ask net-proxy/proxychains net-vpn/mullvad-vpn net-vpn/protonvpn
@@ -47,6 +54,7 @@ sudo emerge --ask sci-mathematics/sage
 pip install ani-cli movie-cli manga-cli libgen-cli kjv
 
 echo "All packages installed successfully!"
+
 
 
 
